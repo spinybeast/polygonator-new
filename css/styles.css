@@ -1,61 +1,3 @@
-/* Reset CSS
- * --------------------------------------- */
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
-form, fieldset, input, textarea, p, blockquote, th, td {
-    padding: 0;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-table {
-    border-spacing: 0;
-}
-
-fieldset, img {
-    border: 0;
-}
-
-address, caption, cite, code, dfn, em, strong, th, var {
-    font-weight: normal;
-    font-style: normal;
-}
-
-strong {
-    font-weight: bold;
-}
-
-ol, ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-caption, th {
-    text-align: left;
-
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    color: #444;
-}
-
-q:before, q:after {
-    content: '';
-}
-
-abbr, acronym {
-    border: 0;
-}
-
-/* Custom CSS
- * --------------------------------------- */
 @keyframes slide-intro {
     from {
         right: -1000px;
@@ -115,35 +57,22 @@ abbr, acronym {
 }
 
 .services {
-    float: left;
-    width: 50%;
-    height: 50%;
     background-size: cover;
     background-position: 0 0;
     background-repeat: no-repeat;
+    min-height: 50%;
 }
 
 .services:nth-child(1) {
     background-image: url(../img/3d.png);
-/*    top: 0;
-    left: 0;*/
 }
 
 .services:nth-child(2) {
     background-image: url(../img/visualization.png);
-/*    top: 0;
-    left: 50%;*/
 }
 
 .services:nth-child(3) {
     background-image: url(../img/animation.png);
-/*    top: 50%;
-    left: 0;*/
-}
-
-.services:nth-child(4) {
-/*    top: 50%;
-    left: 50%;*/
 }
 
 footer {
@@ -154,31 +83,16 @@ footer {
     width: 100%;
 }
 footer .copy {
-    background: #2a2e34;
+    /*background: #2a2e34;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-.polygon, .polygon-text {
-    position: absolute;
-    width: 50%;
-    height: 100%;
+    height: 50px;*/
 }
 
 .polygon {
-    top: 0;
-    left: 0;
     background: url(../img/polygon_back.png) 0 0 no-repeat;
     background-size: contain;
-}
-.polygon-text {
-    top: 0;
-    left: 50%;
+    min-height: 100%;
 }
 
-@media screen and (max-width: 768px){
-    .services {
-        width: 100%;
-    }
-}
