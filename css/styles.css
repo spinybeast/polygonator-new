@@ -115,7 +115,7 @@ abbr, acronym {
 }
 
 .services {
-    position: absolute;
+    float: left;
     width: 50%;
     height: 50%;
     background-size: cover;
@@ -125,25 +125,60 @@ abbr, acronym {
 
 .services:nth-child(1) {
     background-image: url(../img/3d.png);
-    top: 0;
-    left: 0;
+/*    top: 0;
+    left: 0;*/
 }
 
 .services:nth-child(2) {
     background-image: url(../img/visualization.png);
-    top: 0;
-    left: 50%;
+/*    top: 0;
+    left: 50%;*/
 }
 
 .services:nth-child(3) {
     background-image: url(../img/animation.png);
-    top: 50%;
-    left: 0;
+/*    top: 50%;
+    left: 0;*/
 }
 
 .services:nth-child(4) {
-    top: 50%;
+/*    top: 50%;
+    left: 50%;*/
+}
+
+footer {
+    position: absolute;
+    background: #373c43;
+    color: #797e86;
+    bottom: 0;
+    width: 100%;
+}
+footer .copy {
+    background: #2a2e34;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.polygon, .polygon-text {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.polygon {
+    top: 0;
+    left: 0;
+    background: url(../img/polygon_back.png) 0 0 no-repeat;
+    background-size: contain;
+}
+.polygon-text {
+    top: 0;
     left: 50%;
 }
 
-
+@media screen and (max-width: 768px){
+    .services {
+        width: 100%;
+    }
+}
