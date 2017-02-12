@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), url('fonts/CenturyGothic.woff') format('woff'), url('fonts/CenturyGothic.ttf') format('truetype'), url('fonts/CenturyGothic.svg#CenturyGothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @keyframes slide-intro {
     from {
         right: -1000px;
@@ -10,9 +17,14 @@
     }
 }
 
-#section4 {
-    background-size: cover;
-    background-image: url(../img/team.png);
+body {
+    font-family: CenturyGothic, Verdana, sans-serif;
+    color: #9D9FA5;
+    text-shadow: 0 0 1px #000;
+}
+
+.row {
+    margin: 0;
 }
 
 .logo {
@@ -20,9 +32,63 @@
     left: 50%;
     top: 0;
     z-index: 100;
-    background: rgba(129, 130, 129, 0.71);
-    padding: 20px 0 28px 28px;
-    margin-left: -230px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-left: -240px;
+    width: 480px;
+    max-width: 100%;
+}
+
+.logo .row:first-child {
+    padding: 30px 15px 25px 30px;
+}
+
+.menu {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.menu-button {
+    width: 35px;
+    height: 31px;
+    background: url(../img/home/menu_btn_normal.png) 0 0 no-repeat;
+    display: block;
+}
+
+.menu-button:hover {
+    background-image: url(../img/home/menu_btn_hover.png);
+}
+
+.list-menu {
+    display: none;
+    border-radius: 0;
+    border: none;
+    padding: 0;
+}
+
+.list-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list-menu li {
+}
+
+.list-menu li a {
+    padding: 10px 0 10px 30px;
+    display: block;
+    color: #fff;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.list-menu li a:visited, .list-menu li a:focus, .list-menu li a:hover {
+    text-decoration: none;
+}
+
+.list-menu li:hover {
+    background-color: rgba(0, 0, 0, 0.71);
 }
 
 .slide {
@@ -32,13 +98,21 @@
 
 .slide .intro {
     position: absolute;
-    min-height: 14%;
-    background: rgba(129, 130, 129, 0.71);
-    padding: 20px 40px;
+    min-height: 20%;
+    min-width: 55%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 35px;
+    color: #fff;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+}
+
+.intro .orange {
+    color: #FF5D00;
 }
 
 #slide1 {
-    background-image: url(../img/carousel.jpg);
+    background-image: url(../img/home/slider/2.png);
 }
 
 #slide1 .intro {
@@ -52,47 +126,318 @@
     transform: translateX(-1000px);
 }
 
-#slide2 {
-    background-image: url(../img/team.png);
-}
-
 .services {
-    background-size: cover;
+    background-size: 100%;
     background-position: 0 0;
     background-repeat: no-repeat;
     min-height: 50%;
 }
 
 .services:nth-child(1) {
-    background-image: url(../img/3d.png);
+    background-image: url(../img/services/3d_modeling.png);
 }
 
 .services:nth-child(2) {
-    background-image: url(../img/visualization.png);
+    background-image: url(../img/services/visualization.png);
 }
 
 .services:nth-child(3) {
-    background-image: url(../img/animation.png);
+    background-image: url(../img/services/animation.png);
 }
 
-footer {
+.services:nth-child(4) {
+    background-image: url(../img/services/interactive_tour.png);
+}
+
+.services .caption.left {
+    left: 0;
+    top: 35%;
+}
+
+.services .caption.right {
+    right: 0;
+    top: 35%;
+}
+
+.services .caption {
     position: absolute;
-    background: #373c43;
-    color: #797e86;
-    bottom: 0;
-    width: 100%;
-}
-footer .copy {
-    /*background: #2a2e34;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 50px;*/
+    right: 0;
+    top: 40%;
+    max-height: 40%;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0 30px 10px 30px;
+    color: #bcc2cc;
 }
 
+.services .caption.left::before {
+    width: 368px;
+    height: 106px;
+    position: absolute;
+    content: " ";
+    bottom: -35px;
+    right: -34px;
+    background: url(../img/services/caption-left.png) 0 0 no-repeat;
+}
+
+.services .caption.right::before {
+    width: 368px;
+    height: 106px;
+    position: absolute;
+    content: " ";
+    bottom: -35px;
+    left: -34px;
+    background: url(../img/services/caption-right.png) 0 0 no-repeat;
+}
+
+.services .caption p {
+    margin: 0;
+}
+
+.services .caption h2 {
+    color: #fff;
+}
 .polygon {
-    background: url(../img/polygon_back.png) 0 0 no-repeat;
+    background: url(../img/works/polygon.png) 0 0 no-repeat;
     background-size: contain;
+    background-origin: content-box;
+    padding: 30px;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.polygon-text {
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-shadow: none;
+    color: #373c43;
+}
+footer {
+    background: #373c43;
+    bottom: 0;
+    width: 100%;
+    clear: both;
+    height: 120px;
+    position: absolute;
+}
+
+footer .copy {
+    background: #2a2e34;
+    padding-top: 6px;
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.social {
+    padding-top: 33px;
+}
+
+.social div {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url(../img/contact-us/socials.png);
+    cursor: pointer;
+}
+
+.social .facebook {
+    background-position: 0 32px;
+}
+
+.social .facebook:hover {
+    background-position: 0 0;
+}
+
+.social .twitter {
+    background-position: -32px 32px;
+}
+
+.social .twitter:hover {
+    background-position: -32px 0;
+}
+
+.social .google {
+    background-position: -96px 32px;
+}
+
+.social .google:hover {
+    background-position: -96px 0;
+}
+
+.social .vk {
+    background-position: 32px 32px;
+}
+
+.social .vk:hover {
+    background-position: 32px 0;
+}
+
+.social .instagram {
+    background-position: -128px 32px;
+}
+
+.social .instagram:hover {
+    background-position: -128px -1px;
+}
+
+.social .pinterest {
+    background-position: -160px 32px;
+}
+
+.social .pinterest:hover {
+    background-position: -160px 0;
+}
+
+.social .youtube {
+    background-position: -64px 32px;
+}
+
+.social .youtube:hover {
+    background-position: -64px 0;
+}
+
+.social .vimeo {
+    background-position: -192px 32px;
+}
+
+.social .vimeo:hover {
+    background-position: -192px 0;
+}
+
+.social .skype {
+    background-position: -224px 32px;
+    margin-right: 0;
+}
+
+.social .skype:hover {
+    background-position: -224px 0;
+}
+
+.up {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: -65px;
+    right: 30px;
+    background: #373c43;
+    cursor: pointer;
+}
+
+.up .arrow {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    border: 17px solid transparent;
+    border-bottom: 17px solid #565D67;
+}
+
+.up:hover .arrow {
+    border-bottom-color: #9d9fa5;
+}
+
+.up::before {
+    content: ' ';
+    position: absolute;
+    height: 95px;
+    width: 55px;
+    background: url(../img/contact-us/up.png);
+    top: -35px;
+    left: -27px;
+}
+
+.form-group {
+    margin-bottom: 3px;
+}
+
+.form-group input, .form-group textarea {
+    background: #797e86 url(../img/contact-us/input.png) right bottom no-repeat;
+    outline: none;
+    border: none;
+    padding: 5px 35px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    background: #3e434b;
+}
+
+.form-group input, .form-group textarea, .form-group .btn {
+    width: 100%;
+    color: #fff;
+}
+
+.form-group .btn {
+    border-radius: 0;
+    background: #9d9fa5;
+}
+
+textarea {
+    resize: none;
+}
+
+#contact_form {
+    position: relative
+}
+
+#contact_form::before {
+    width: 95px;
+    height: 55px;
+    position: absolute;
+    content: " ";
+    top: -28px;
+    right: -36px;
+    background: url(../img/contact-us/name.png) 0 0 no-repeat;
+}
+
+.logo-darker::before {
+    content: ' ';
+    position: absolute;
+    height: 55px;
+    width: 95px;
+    background: url(../img/contact-us/logo_darker_back.png);
+    top: 31px;
+    left: -21px;
+}
+
+.logo-darker {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.dark-caption::before {
+    content: ' ';
+    position: absolute;
+    height: 103px;
+    width: 367px;
+    background: url(../img/contact-us/contact.png);
+    top: -36px;
+    right: -36px;
+}
+
+.dark-caption {
+    background: #797e86;
+    padding: 10px 40px;
+    margin-bottom: 60px;
+    position: relative;
+    color: #fff;
+}
+.contact-info {
+    padding-top: 10px;
+}
+.contact-info p {
+    margin: 0;
+}
+#section3 .fp-tableCell {
+    padding-bottom: 120px;
     min-height: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+    .is_mobile {
+        display: none;
+    }
+}
