@@ -1,0 +1,37 @@
+@media only screen and (max-width: 768px) {
+    .is_mobile {
+        display: none;
+    }
+
+    .logo {
+        left: 0 !important;
+        margin-left: 0 !important;
+        position: relative !important;
+    }
+
+    .section {
+        display: block;
+        min-height: 500px;
+        position: relative;
+    }
+
+    #section0 {
+        background: url(../img/home/slider/2.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    #section3 {
+        background: #565d67;
+    }
+
+    .services {
+        height: 250px;
+    }
+    .services .caption {
+        width: 100% !important;
+    }
+
+    footer {
+        position: relative !important;
+    }
+}

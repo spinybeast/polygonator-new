@@ -1,3 +1,5 @@
+@import "mobile.css";
+
 @font-face {
     font-family: 'CenturyGothic';
     src: url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), url('fonts/CenturyGothic.woff') format('woff'), url('fonts/CenturyGothic.ttf') format('truetype'), url('fonts/CenturyGothic.svg#CenturyGothic') format('svg');
@@ -431,10 +433,4 @@ textarea {
 #section3 .fp-tableCell {
     padding-bottom: 120px;
     min-height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .is_mobile {
-        display: none;
-    }
 }
