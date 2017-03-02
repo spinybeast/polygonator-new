@@ -11,10 +11,12 @@
 
     .section {
         display: block;
-        min-height: 500px;
         position: relative;
     }
-
+    .slide .intro {
+        width: auto !important;
+        padding: 30px 15px !important;
+    }
     #section0 {
         background: url(../img/home/slider/2.png) 0 0 no-repeat;
         background-size: cover;
