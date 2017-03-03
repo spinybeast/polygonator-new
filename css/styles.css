@@ -1,5 +1,3 @@
-@import "mobile.css";
-
 @font-face {
     font-family: 'CenturyGothic';
     src: url('fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'), url('fonts/CenturyGothic.woff') format('woff'), url('fonts/CenturyGothic.ttf') format('truetype'), url('fonts/CenturyGothic.svg#CenturyGothic') format('svg');
@@ -433,4 +431,48 @@ textarea {
 #section3 .fp-tableCell {
     padding-bottom: 120px;
     min-height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .is_mobile {
+        display: none;
+    }
+
+    .logo {
+        left: 0;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .section {
+        display: block;
+        position: relative;
+    }
+    .slide {
+        min-height: 280px;
+        background: none !important;
+    }
+    .slide .intro {
+        width: auto;
+        padding: 30px 15px;
+    }
+    #section0 {
+        background: url(../img/home/slider/2.png) 0 0 no-repeat fixed;
+        background-size: cover;
+    }
+
+    #section3 {
+        background: #565d67;
+    }
+
+    .services {
+        height: 235px;
+    }
+    .services .caption {
+        width: 100%;
+    }
+
+    footer {
+        position: relative;
+    }
 }
