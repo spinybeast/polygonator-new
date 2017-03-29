@@ -194,6 +194,7 @@ body {
 .services .caption h2 {
     color: #fff;
 }
+
 .polygon {
     background: url(../img/works/polygon.png) 0 0 no-repeat;
     background-size: contain;
@@ -205,12 +206,14 @@ body {
     top: 0;
     left: 0;
 }
+
 .polygon-text {
     font-size: 1.4em;
     letter-spacing: 2px;
     text-shadow: none;
     color: #373c43;
 }
+
 footer {
     background: #373c43;
     bottom: 0;
@@ -422,12 +425,15 @@ textarea {
     position: relative;
     color: #fff;
 }
+
 .contact-info {
     padding-top: 10px;
 }
+
 .contact-info p {
     margin: 0;
 }
+
 #section3 .fp-tableCell {
     padding-bottom: 120px;
     min-height: 100%;
@@ -444,18 +450,36 @@ textarea {
         position: relative;
     }
 
+    .logo .row:first-child {
+        padding-left: 15px;
+    }
+
+    .menu {
+        bottom: 6px;
+        right: -25px;
+    }
+
     .section {
         display: block;
         position: relative;
     }
+
+    .section::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+
     .slide {
         min-height: 280px;
         background: none !important;
     }
+
     .slide .intro {
         width: auto;
         padding: 30px 15px;
     }
+
     #section0 {
         background: url(../img/home/slider/2.png) 0 0 no-repeat fixed;
         background-size: cover;
@@ -466,13 +490,32 @@ textarea {
     }
 
     .services {
-        height: 235px;
+        height: 234px;
     }
+
     .services .caption {
         width: 100%;
     }
 
+    .polygon {
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    .polygon-text {
+        padding: 15px;
+    }
+
+    .dark-caption::before, .up::before, #contact_form::before, .logo-darker::before, .services .caption::before, .services .caption::after {
+        display: none;
+    }
+
+    .last {
+        padding: 15px 0 60px 0;
+    }
+
     footer {
         position: relative;
+        height: 185px;
     }
 }
