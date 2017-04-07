@@ -317,6 +317,11 @@ footer .copy {
 .social .skype:hover {
     background-position: -224px 0;
 }
+.social div a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
 
 .up {
     width: 65px;
