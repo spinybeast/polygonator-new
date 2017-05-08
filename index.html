@@ -6,6 +6,7 @@
     <title>Polygonator</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/jquery.fullpage.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/styles.css" type="text/css"/>
     <link rel="icon" type="image/png" href="favicon.ico">
 </head>
@@ -21,7 +22,6 @@
                         <a class="menu-button" href="#"></a>
                     </div>
                 </div>
-
             </div>
             <div class="row list-menu">
                 <ul id="menu">
@@ -47,17 +47,53 @@
     </div>
     <div class="section" id="section1" data-anchor="services">
         <div class="services col-md-6 col-xs-12">
-            <div class="caption left">
+            <div class="caption left" data-fancybox-gallery="gallery_3d">
                 <h2>3D Modeling</h2>
                 <p>it can be a lot of fun to work on though</p>
                 <p>it can be challenging in terms of its shape</p>
             </div>
+            <div class="gallery">
+                <ul>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/001.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/002.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/003.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/004.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/005.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/006.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/007.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/008.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/009.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/010.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/011.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/012.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/013.jpg"></a></li>
+                    <li><a data-fancybox="gallery_3d" href="img/services/galleries/3d_modelling/014.jpg"></a></li>
+                </ul>
+            </div>
         </div>
         <div class="services col-md-6 col-xs-12">
-            <div class="caption right">
+            <div class="caption right" data-fancybox-gallery="gallery_vis">
                 <h2>Visualization</h2>
                 <p>what we do is a combination of</p>
                 <p>technology and talent</p>
+            </div>
+            <div class="gallery">
+                <ul>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/001.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/002.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/003.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/004.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/005.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/006.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/007.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/008.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/009.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/010.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/011.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/012.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/013.jpg"></a></li>
+                    <li><a data-fancybox="gallery_vis" href="img/services/galleries/visualization/014.jpg"></a></li>
+                </ul>
             </div>
         </div>
         <div class="services col-md-6 col-xs-12">
@@ -178,6 +214,7 @@
 <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/jquery.fullpage.min.js" type="text/javascript"></script>
+<script src="js/jquery.fancybox.min.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var is_mobile = false;
@@ -188,7 +225,6 @@
         if (!is_mobile) {
             $('#fullPage').fullpage({
                 anchors: ['home', 'services', 'works', 'contact-us'],
-                menu: '#menu',
                 css3: true,
                 sectionsColor: ['#565d67', '#565d67', '#ffffff', '#565d67', '#565d67']
             });
@@ -203,7 +239,6 @@
             });
             $('#menu li a').click(function () {
                 var top = $('[data-anchor="' + $(this).parent().data('menuanchor') + '"]').offset().top;
-                console.log(top);
                 $('html,body').animate({
                     scrollTop: top
                 }, 700);
@@ -211,6 +246,14 @@
         }
         $('.menu-button').on('click', function () {
             $('.list-menu').slideToggle('slow');
+        });
+        $('[data-fancybox]').fancybox({
+            speed : 700,
+            fullScreen: false
+        });
+        $('[data-fancybox-gallery]').click(function(e) {
+            e.preventDefault();
+            $('[data-fancybox=' + $(this).data('fancybox-gallery') + ']:eq(0)').click();
         });
         $("#contact").submit(function(e) {
             e.preventDefault();

@@ -195,6 +195,14 @@ body {
     color: #fff;
 }
 
+.services .gallery {
+    display: none;
+}
+.services [data-fancybox-gallery] {
+    cursor:pointer;
+}.services [data-fancybox-gallery]:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
 .polygon {
     background: url(../img/works/polygon.png) 0 0 no-repeat;
     background-size: contain;
